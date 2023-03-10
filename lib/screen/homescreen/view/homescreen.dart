@@ -14,6 +14,13 @@ class _HomescreenState extends State<Homescreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.pink,
+          title: Text("Edit Your Profile",style: TextStyle(color: Colors.white,letterSpacing: 1)),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.all_inclusive,size: 35),
+            ),
+          ],
         ),
         drawer: Drawer(
           child: Column(
@@ -46,7 +53,7 @@ class _HomescreenState extends State<Homescreen> {
           currentStep: i,
           onStepContinue: () {
             setState(() {
-              if(i<3)
+              if(i<10)
                 {
                   i++;
                 }
@@ -61,10 +68,18 @@ class _HomescreenState extends State<Homescreen> {
             });
           },
           steps: [
-            Step(title: Text("Step 1"), content: TextField(),),
-            Step(title: Text("Step 2"), content: TextField(),),
-            Step(title: Text("Step 3"), content: TextField(),),
-            Step(title: Text("Step 4"), content: TextField(),),
+            Step(title: Text("Profile Picture"), content: TextField(),),
+            Step(title: Text("Name"), content: TextField(),),
+            Step(title: Text("Phone"), content: TextField(),),
+            Step(title: Text("Email"), content: TextField(),),
+            Step(title: Text("DOB"), content: TextField(),),
+            Step(title: Text("Gender"), content: TextField(),),
+            Step(title: Text("Current Location"), content: TextField(),),
+            Step(title: Text("Nationalities"), content: TextField(),),
+            Step(title: Text("Religion"), content: TextField(),),
+            Step(title: Text("Language"), content: TextField(),),
+            Step(title: Text("Biography"), content: TextField(),),
+
           ],
         ),
       ),
